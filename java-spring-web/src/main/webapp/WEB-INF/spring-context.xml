@@ -1,0 +1,15 @@
+<!-- mvc:annotation wildcard it's because in xsi:schemalocation not foounf spring mvc & spring mvc .xsd -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- specify package that need to be scanned for looking spring annotations -->
+    <context:component-scan base-package="id.co.ionsoft"/>
+
+    <!-- enable spring annotations based configuration -->
+    <context:annotation-config/>
+</beans>
