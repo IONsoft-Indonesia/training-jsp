@@ -1,10 +1,7 @@
-<%-- 
-    Document   : contact.jsp
-    Created on : Jan 21, 2018, 5:13:57 PM
-    Author     : sukma
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" %>
+<%@page pageEncoding="UTF-8" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +9,17 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Contact</h1>
+        <form:form method="post" action="../ion/message" modelAttribute="contact">
+            <div>
+                <label>Name:</label>
+                <form:input path="name" />
+            </div>
+            <div>
+                <label>Message:</label>
+                <form:textarea path="message"></form:textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form:form>
     </body>
 </html>
